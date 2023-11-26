@@ -43,4 +43,3 @@ function fn() {
 //     iterator
 // }
 effect(fn)
-obj.name = 23

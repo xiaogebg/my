@@ -46,6 +46,7 @@ export function effect(fn) {
 export function trigger(target, type, key) {
     const fns = getEffectFns(target,type,key)
     for (const fn of fns) {
+        if (fn === activeEffect) continue
         fn()
     }
 }
